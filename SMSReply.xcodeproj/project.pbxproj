@@ -13,18 +13,9 @@
 		94A6DD1D1B33338700FF5C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A6DD1B1B33338700FF5C01 /* Main.storyboard */; };
 		94A6DD1F1B33338700FF5C01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A6DD1E1B33338700FF5C01 /* Images.xcassets */; };
 		94A6DD221B33338700FF5C01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A6DD201B33338700FF5C01 /* LaunchScreen.xib */; };
-		94A6DD2E1B33338700FF5C01 /* SMSReplyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A6DD2D1B33338700FF5C01 /* SMSReplyTests.m */; };
+		94A6DD381B33371000FF5C01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6DD371B33371000FF5C01 /* CoreTelephony.framework */; };
+		94A6DD3B1B3337BC00FF5C01 /* RWMessageCenterBind.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A6DD3A1B3337BC00FF5C01 /* RWMessageCenterBind.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		94A6DD281B33338700FF5C01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94A6DD061B33338600FF5C01 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94A6DD0D1B33338700FF5C01;
-			remoteInfo = SMSReply;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		94A6DD0E1B33338700FF5C01 /* SMSReply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSReply.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +28,13 @@
 		94A6DD1C1B33338700FF5C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94A6DD1E1B33338700FF5C01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94A6DD211B33338700FF5C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		94A6DD271B33338700FF5C01 /* SMSReplyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMSReplyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A6DD2C1B33338700FF5C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A6DD2D1B33338700FF5C01 /* SMSReplyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSReplyTests.m; sourceTree = "<group>"; };
+		94A6DD371B33371000FF5C01 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		94A6DD391B3337BC00FF5C01 /* RWMessageCenterBind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWMessageCenterBind.h; sourceTree = "<group>"; };
+		94A6DD3A1B3337BC00FF5C01 /* RWMessageCenterBind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWMessageCenterBind.m; sourceTree = "<group>"; };
+		94A6DD3C1B333AED00FF5C01 /* CTMessageCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMessageCenter.h; sourceTree = "<group>"; };
+		94A6DD421B333DB900FF5C01 /* SMSReply.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SMSReply.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94A6DD241B33338700FF5C01 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				94A6DD381B33371000FF5C01 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +52,7 @@
 		94A6DD051B33338600FF5C01 = {
 			isa = PBXGroup;
 			children = (
+				94A6DD371B33371000FF5C01 /* CoreTelephony.framework */,
 				94A6DD101B33338700FF5C01 /* SMSReply */,
 				94A6DD2A1B33338700FF5C01 /* SMSReplyTests */,
 				94A6DD0F1B33338700FF5C01 /* Products */,
@@ -73,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				94A6DD0E1B33338700FF5C01 /* SMSReply.app */,
-				94A6DD271B33338700FF5C01 /* SMSReplyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +70,8 @@
 		94A6DD101B33338700FF5C01 /* SMSReply */ = {
 			isa = PBXGroup;
 			children = (
+				94A6DD421B333DB900FF5C01 /* SMSReply.entitlements */,
+				94A6DD3C1B333AED00FF5C01 /* CTMessageCenter.h */,
 				94A6DD151B33338700FF5C01 /* AppDelegate.h */,
 				94A6DD161B33338700FF5C01 /* AppDelegate.m */,
 				94A6DD181B33338700FF5C01 /* ViewController.h */,
@@ -89,6 +80,8 @@
 				94A6DD1E1B33338700FF5C01 /* Images.xcassets */,
 				94A6DD201B33338700FF5C01 /* LaunchScreen.xib */,
 				94A6DD111B33338700FF5C01 /* Supporting Files */,
+				94A6DD391B3337BC00FF5C01 /* RWMessageCenterBind.h */,
+				94A6DD3A1B3337BC00FF5C01 /* RWMessageCenterBind.m */,
 			);
 			path = SMSReply;
 			sourceTree = "<group>";
@@ -139,24 +132,6 @@
 			productReference = 94A6DD0E1B33338700FF5C01 /* SMSReply.app */;
 			productType = "com.apple.product-type.application";
 		};
-		94A6DD261B33338700FF5C01 /* SMSReplyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94A6DD341B33338700FF5C01 /* Build configuration list for PBXNativeTarget "SMSReplyTests" */;
-			buildPhases = (
-				94A6DD231B33338700FF5C01 /* Sources */,
-				94A6DD241B33338700FF5C01 /* Frameworks */,
-				94A6DD251B33338700FF5C01 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94A6DD291B33338700FF5C01 /* PBXTargetDependency */,
-			);
-			name = SMSReplyTests;
-			productName = SMSReplyTests;
-			productReference = 94A6DD271B33338700FF5C01 /* SMSReplyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +143,15 @@
 				TargetAttributes = {
 					94A6DD0D1B33338700FF5C01 = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					94A6DD261B33338700FF5C01 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 94A6DD0D1B33338700FF5C01;
+						DevelopmentTeam = P954ZL462S;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -189,7 +169,6 @@
 			projectRoot = "";
 			targets = (
 				94A6DD0D1B33338700FF5C01 /* SMSReply */,
-				94A6DD261B33338700FF5C01 /* SMSReplyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +184,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94A6DD251B33338700FF5C01 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,29 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A6DD3B1B3337BC00FF5C01 /* RWMessageCenterBind.m in Sources */,
 				94A6DD1A1B33338700FF5C01 /* ViewController.m in Sources */,
 				94A6DD171B33338700FF5C01 /* AppDelegate.m in Sources */,
 				94A6DD141B33338700FF5C01 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94A6DD231B33338700FF5C01 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94A6DD2E1B33338700FF5C01 /* SMSReplyTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		94A6DD291B33338700FF5C01 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94A6DD0D1B33338700FF5C01 /* SMSReply */;
-			targetProxy = 94A6DD281B33338700FF5C01 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94A6DD1B1B33338700FF5C01 /* Main.storyboard */ = {
@@ -280,7 +237,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -323,7 +279,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -347,9 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SMSReply/SMSReply.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = SMSReply/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,43 +316,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SMSReply/SMSReply.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = SMSReply/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		94A6DD351B33338700FF5C01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SMSReplyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSReply.app/SMSReply";
-			};
-			name = Debug;
-		};
-		94A6DD361B33338700FF5C01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SMSReplyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMSReply.app/SMSReply";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,14 +345,7 @@
 				94A6DD331B33338700FF5C01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		94A6DD341B33338700FF5C01 /* Build configuration list for PBXNativeTarget "SMSReplyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94A6DD351B33338700FF5C01 /* Debug */,
-				94A6DD361B33338700FF5C01 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

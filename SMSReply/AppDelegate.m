@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RWMessageCenterBind.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    BOOL st = [[RWMessageCenterBind sharedBind] sendMessage:@"HELLo" receiver:@"+8618502110956"];
+    NSLog(@"st: %d", st);
     return YES;
 }
 
